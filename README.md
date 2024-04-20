@@ -1,27 +1,22 @@
 # E-Commerce-Recommendation-System-using-Deep-Learning
 Project methodolgy
-Dataset has been taken from kaggle, the shape of data is (189874, 5).
-First the data has been catergorized in respected buckets.
-That are:
+    1) Data Preprocessing:
+        You've collected a dataset from Kaggle containing around 189,874 entries with 5 columns.
+        Categorized the data into different buckets like household, electronics, baby, etc.
+        Focused on the "Summary" column for analysis.
+    2) NLP Techniques for Preprocessing:
+        Lowercasing the text, removing white spaces and non-words, and eliminating digits to clean the text data.
+        Applied tokenization to split the text into individual words.
+        Removed stopwords to filter out common words that don't carry much meaning.
 
-household
-electronics
-baby
-automotive
-arts & crafts
-clothing
-beauty & personal care
-books
-sports & outdoors
-tools & home improvement
-health
-toys & games
+    3) Sentiment Analysis with Naive Bayes:
+        Trained a Naive Bayes model on the "Summary" column to calculate sentiment scores (1 for positive and 0 for negative).
+        Handled multiple reviews for a single product by calculating average sentiment.
 
-After that we focus on the column named "Summary".
-We will apply NLP techniques for pre processing: coverting the text to lower case, removing white spaces and non-words, removing digits, then applying tokenization and removing stopwords.
+    4) User Interface Development:
+        Created a user interface to interact with the recommendation system.
+        Takes input from the user regarding the category and their needs/preferences.
 
-After which we train a model called Nayes bayes on the column "Summary" to calculate the sentiments(1 for postive and 0 for negative ).
-
-Now what we observed that there were more 180000+ rows but the uniques items were only 812, We calculated Average_sentiment breacuse we have multiple reviews for a single product.
-Finally, We created a user interface which will take the input for the category and the needs of the user and will provide recommenadtion.
-for recommendation, We used LSTM.
+    5) Recommendation Algorithm (LSTM):
+        Utilized LSTM (Long Short-Term Memory) model for generating recommendations.
+        LSTM is a type of recurrent neural network (RNN) that is well-suited for sequence prediction tasks, making it suitable for recommendation systems where there's a sequence of interactions or behaviors to learn from.
